@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<p>Enter a Number:<input type="number" id="number"></p>
+<p>
+    <button type="button" onclick="test()">test</button>
+</p>
+<p id="out"></p>
+<script>
+    function number(a) {
+        if (a < 2) {
+            return false;
+        }
+        for (let i = 2; i < Math.sqrt(a); i++) {
+            if (a % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    function test() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("out");
+        let c= "";
+        for (let i=1;i<=a;i++){
+            if (number(a)){
+                c += i + "";
+            }
+        }return c;
+        b.innerText = c;
+    }
+</script>
+</body>
+</html>

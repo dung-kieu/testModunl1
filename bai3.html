@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap vao nam sinh cua ban:<input type="number" id ="year"></p>
+<p><button type="button" onclick="test()">kiem tra</button></p>
+<p id = "out"></p>
+<script>
+    function Age(year) {
+        let age;
+        let now = new Date().getFullYear();
+        if (year>now){
+            alert("Khong hop le");
+        }else {
+            age = now - year;
+        }
+        return age;
+    }
+
+    function test() {
+        let year = document.getElementById('year').value;
+        let a = Age(year);
+        document.getElementById('out').innerHTML ="tuoi la :" + Age(year);
+    }
+</script>
+</body>
+
+</html>
